@@ -2,7 +2,10 @@ import { useDispatch } from "react-redux";
 
 export const removeFeature = item => {
     // dispatch an action here to remove an item
-    return{ type: ''}
+    return { 
+        type: 'REMOVE_FEATURE',
+        payload: item.id
+    }
   };
 
 export const buyItem = item => {

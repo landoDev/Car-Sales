@@ -17,10 +17,17 @@ export const initialState ={
 
 export const carReducer = (state = initialState, action) =>{
     console.log('ACTION TAKEN', action)
+    console.log('ACTION PAYLOAD', action.payload)
     switch(action.type){
         case 'REMOVE_FEATURE':
-            return state;
-        case 'REMOVE_FEATURE':
+            return{
+                ...state,
+                car: {
+                    ...state.car,
+                    features: state.car.features.filter(feature => feature.id !== action.payload)
+                }
+            }
+        case 'BUY_ITEM':
             return state;
         case 'ADD_FEATURE':
             return{
@@ -30,7 +37,7 @@ export const carReducer = (state = initialState, action) =>{
               features: [...state.car.features, action.payload]
             }
           };;
-        case 'REMOVE_FEATURE':
+        case 'UPDATE_TOTAL':
             return state;
         default:
             return state;
