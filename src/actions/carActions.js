@@ -1,15 +1,27 @@
+import { useDispatch } from "react-redux";
+
 export const removeFeature = item => {
     // dispatch an action here to remove an item
+    return{ type: ''}
   };
 
 export const buyItem = item => {
-// dipsatch an action here to add an item
+    return{ type: ''}
 };
 
 export const addFeature = item =>{
     // dispatch an action to add a feature
+    return { 
+        type: 'ADD_FEATURE', 
+        payload:{
+            id: item.id,
+            name: item.name,
+            price: item.price
+        } 
+    }
 }
 
 export const updateTotal = item =>{
     // dispatch an action to update the total
+    return{ type: ''}
 }
