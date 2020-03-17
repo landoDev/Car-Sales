@@ -23,8 +23,3 @@ export const addFeature = item =>{
         } 
     }
 }
-
-export const updateTotal = item =>{
-    // dispatch an action to update the total
-    return{ type: ''}
-}
