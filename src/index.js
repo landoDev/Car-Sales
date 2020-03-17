@@ -6,9 +6,9 @@ import App from './App';
 
 import 'bulma/css/bulma.css';
 import './styles.scss';
+import { carReducer } from './reducers/carReducer';
 
-const reducer = () => {}
-const store = createStore(reducer)
+const store = createStore(carReducer)
 
 const rootElement = document.getElementById('root');
 ReactDOM.render(
