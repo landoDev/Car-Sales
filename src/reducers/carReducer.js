@@ -17,7 +17,13 @@ export const initialState ={
 
 export const carReducer = (state = initialState, action) =>{
     switch(action.type){
-        case 'placeholder':
+        case 'REMOVE_FEATURE':
+            return state;
+        case 'REMOVE_FEATURE':
+            return state;
+        case 'REMOVE_FEATURE':
+            return state;
+        case 'REMOVE_FEATURE':
             return state;
         default:
             return state;
